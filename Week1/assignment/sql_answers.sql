@@ -76,7 +76,7 @@ CHECK (payment_method IN ('cash', 'esewa', 'khalti', 'card', 'wallet'));
 INSERT INTO rides (ride_id, driver_name, passenger_name, pickup_city, dropoff_city, fare_amount, ride_distance_km, ride_status, requested_at, payment_method)
 VALUES (9002, 'Test Driver', 'Test Passenger', 'Kathmandu', 'Pokhara', 500, 20, 'completed', CURRENT_TIMESTAMP, 'paypal');
 
-ERROR: new row violates check constraint "payment_method_check"
+--ERROR: new row violates check constraint "payment_method_check"
 
 
 -- Q10 — Rides priced above the platform average (Basic · Subquery)
