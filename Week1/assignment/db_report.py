@@ -26,7 +26,7 @@ DB_CONFIG = dict(
     dbname="ride_share", user="postgres", password="Test123"
 )
 
-# TODO: fill in each query to match Q6 / Q7 / Q8 from sql_assignment.md
+#fill in each query to match Q6 / Q7 / Q8 from sql_assignment.md
 REVENUE_BY_CITY_QUERY = """
 SELECT pickup_city,
     COUNT(*) AS total_rides,
@@ -75,7 +75,7 @@ def run_query(conn, query, label):
 
 def print_revenue_by_city(rows):
     print("\n-- Revenue by pickup city --")
-    # TODO: loop over rows and print each one formatted, e.g.
+    # loop over rows and print each one formatted, e.g.
     # f"{city:<15} | rides: {count:>4} | revenue: NPR {revenue:,.2f} | avg fare: NPR {avg_fare:,.2f}"
     for city, count, revenue, avg_fare in rows:
         print(
@@ -87,7 +87,7 @@ def print_revenue_by_city(rows):
 
 def print_loyalty_bonus(rows):
     print("\n-- Drivers who qualify for the loyalty bonus --")
-    # TODO: loop over rows and print each one formatted
+    #loop over rows and print each one formatted
     for driver, rides in rows:
         print(
             f"{driver:<20} | "
@@ -96,7 +96,7 @@ def print_loyalty_bonus(rows):
 
 def print_outcomes_by_status(rows):
     print("\n-- Ride outcomes by status --")
-    # TODO: loop over rows and print each one formatted
+    #loop over rows and print each one formatted
     for status, count, avg_distance in rows:
         print(
             f"{status:<15} | "
